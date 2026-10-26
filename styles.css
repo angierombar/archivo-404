@@ -62,7 +62,8 @@ nav ul li a {
     transition: 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
     color: #a94747;
 }
 
@@ -168,7 +169,7 @@ nav ul li a:hover {
 
 .casos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
@@ -199,6 +200,7 @@ nav ul li a:hover {
 .imagen-caso img {
     width: 100%;
     height: 100%;
+    min-width: 0;
     object-fit: cover;
     display: block;
 }
@@ -331,8 +333,14 @@ footer {
         font-size: 60px;
     }
 
-    .casos {
-        grid-template-columns: 1fr;
+      .archivos-controles {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 25px 0;
+    }
+
+    .buscador input {
+        width: 100%;
     }
 
     .destacados {
@@ -347,4 +355,111 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* ================================
+   PÁGINA ARCHIVOS
+================================ */
+
+.archivos-cabecera {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+.archivos-controles {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.archivos-controles + .destacados {
+    padding-top: 50px;
+}
+
+.buscador input {
+    width: 340px;
+    max-width: 100%;
+    padding: 13px 16px;
+
+    background-color: #1a1817;
+    color: #e8e0d4;
+    border: 1px solid #3a302c;
+
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.buscador input::placeholder {
+    color: #756c64;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #d8b98c;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtro {
+    padding: 12px 20px;
+
+    background-color: transparent;
+    color: #d8b98c;
+    border: 1px solid #3a302c;
+
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover {
+    border-color: #7d292d;
+}
+
+.filtro.activo {
+    background-color: #7d292d;
+    border-color: #7d292d;
+    color: #f5eee5;
+}
+
+.filtro:focus-visible {
+    outline: 2px solid #d8b98c;
+    outline-offset: 2px;
+}
+
+.tarjeta[hidden] {
+    display: none;
+}
+
+.sin-resultados {
+    padding: 50px 0;
+    text-align: center;
+    color: #91877f;
+}
+
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.imagen-caso img {
+    object-position: center;
 }

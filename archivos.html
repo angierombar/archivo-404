@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Página ARCHIVOS | Autor: Joshua -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivos | Archivo 404</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ARCHIVO 404</div>
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="archivos.html" aria-current="page">ARCHIVOS</a></li>
+                <li><a href="#">DESTACADOS</a></li>
+                <li><a href="#">SOBRE EL ARCHIVO</a></li>
+                <li><a href="#">FUENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero archivos-cabecera">
+            <p class="numero">EXPEDIENTES</p>
+            <h1>ARCHIVOS</h1>
+            <p class="descripcion">
+                Seis casos reales que nunca encontraron un cierre definitivo.
+                Busca por nombre o lugar y filtra por el estado del expediente.
+            </p>
+        </section>
+
+        <section class="archivos-controles">
+            <div class="buscador">
+                <label for="buscador" class="solo-lectores">Buscar un caso</label>
+                <input type="search" id="buscador" placeholder="Buscar por nombre, lugar o año...">
+            </div>
+
+            <div class="filtros" role="group" aria-label="Filtrar casos">
+                <button type="button" class="filtro activo" data-filtro="todos">TODOS</button>
+                <button type="button" class="filtro" data-filtro="historico">HISTÓRICOS</button>
+                <button type="button" class="filtro" data-filtro="reabierto">REABIERTOS</button>
+            </div>
+        </section>
+
+        <section class="destacados">
+
+            <div class="casos" id="lista-casos">
+
+                <article class="tarjeta" data-estado="historico">
+                    <div class="imagen-caso">
+                        <img src="imagenes/jack.png" alt="Ilustración histórica de Jack the Ripper">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #001</span>
+                        <h3>Jack the Ripper</h3>
+                        <p>Londres, Inglaterra · 1888</p>
+                        <a href="caso-001.html">VER CASO →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta" data-estado="reabierto">
+                    <div class="imagen-caso">
+                        <img src="imagenes/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #002</span>
+                        <h3>Zodiac Killer</h3>
+                        <p>California, EE. UU. · 1968</p>
+                        <a href="caso-002.html">VER CASO →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta" data-estado="reabierto">
+                    <div class="imagen-caso">
+                        <img src="imagenes/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #003</span>
+                        <h3>Black Dahlia</h3>
+                        <p>Los Ángeles, EE. UU. · 1947</p>
+                        <a href="caso-003.html">VER CASO →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta" data-estado="historico">
+                    <div class="imagen-caso">
+                        <img src="imagenes/hinterkaifeck.jpeg" alt="Granja de Hinterkaifeck, Baviera">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #004</span>
+                        <h3>Hinterkaifeck</h3>
+                        <p>Baviera, Alemania · 1922</p>
+                        <a href="caso-004.html">VER CASO →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta" data-estado="historico">
+                    <div class="imagen-caso">
+                        <img src="imagenes/villisca.jpeg" alt="Casa de los asesinatos con hacha de Villisca">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #005</span>
+                        <h3>Villisca Axe Murders</h3>
+                        <p>Iowa, EE. UU. · 1912</p>
+                        <a href="caso-005.html">VER CASO →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta" data-estado="reabierto">
+                    <div class="imagen-caso">
+                        <img src="imagenes/lake-bodom-1.webp" alt="Lago Bodom, Finlandia">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <span>ARCHIVE #006</span>
+                        <h3>Lake Bodom</h3>
+                        <p>Espoo, Finlandia · 1960</p>
+                        <a href="caso-006.html">VER CASO →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="sin-resultados" id="sin-resultados" hidden>
+                No hay casos que coincidan. Prueba con otro nombre o cambia el filtro.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>ARCHIVO 404 — MISTERIOS SIN RESOLVER</p>
+        <p>Proyecto de Diseño de Experiencias de Usuario</p>
+    </footer>
+
+    <script>
+        const buscador = document.getElementById('buscador');
+        const botones = document.querySelectorAll('.filtro');
+        const tarjetas = document.querySelectorAll('#lista-casos .tarjeta');
+        const vacio = document.getElementById('sin-resultados');
+        let filtroActual = 'todos';
+
+        function aplicar() {
+            const texto = buscador.value.trim().toLowerCase();
+            let visibles = 0;
+
+            tarjetas.forEach(t => {
+                const coincideTexto = t.textContent.toLowerCase().includes(texto);
+                const coincideFiltro = filtroActual === 'todos' || t.dataset.estado === filtroActual;
+                const mostrar = coincideTexto && coincideFiltro;
+                t.hidden = !mostrar;
+                if (mostrar) visibles++;
+            });
+
+            vacio.hidden = visibles > 0;
+        }
+
+        buscador.addEventListener('input', aplicar);
+
+        botones.forEach(b => {
+            b.addEventListener('click', () => {
+                botones.forEach(x => x.classList.remove('activo'));
+                b.classList.add('activo');
+                filtroActual = b.dataset.filtro;
+                aplicar();
+            });
+        });
+    </script>
+
+</body>
+</html>
