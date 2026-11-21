@@ -348,3 +348,181 @@ footer {
         text-align: center;
     }
 }
+
+
+/* ================================
+   EXPEDIENTES INDIVIDUALES
+================================ */
+
+.expediente {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 30px 100px;
+}
+
+.expediente-cabecera {
+    border-bottom: 1px solid #3a302c;
+    padding-bottom: 35px;
+    margin-bottom: 45px;
+}
+
+.expediente-cabecera .numero {
+    margin-bottom: 15px;
+}
+
+.expediente-cabecera h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.05;
+    color: #eee5da;
+    margin-bottom: 30px;
+}
+
+.datos-caso {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 40px;
+}
+
+.dato {
+    border-left: 2px solid #7d292d;
+    padding-left: 14px;
+}
+
+.dato dt {
+    color: #756c64;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dato dd {
+    color: #e8e0d4;
+    font-size: 15px;
+}
+
+.dato .estado {
+    color: #a94747;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.imagen-expediente {
+    margin: 0 0 55px;
+    background-color: #292522;
+    border: 1px solid #3a302c;
+}
+
+.imagen-expediente img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-expediente figcaption {
+    padding: 12px 18px;
+    color: #756c64;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.seccion-caso {
+    margin-bottom: 55px;
+}
+
+.seccion-caso h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #d8b98c;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #3a302c;
+}
+
+.seccion-caso h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    color: #eee5da;
+    margin: 25px 0 8px;
+}
+
+.seccion-caso p,
+.seccion-caso li {
+    color: #a99e94;
+    font-size: 15px;
+}
+
+.seccion-caso p {
+    margin-bottom: 12px;
+}
+
+.seccion-caso ul:not(.linea-tiempo) {
+    padding-left: 20px;
+}
+
+.seccion-caso ul:not(.linea-tiempo) li {
+    margin-bottom: 10px;
+}
+
+.linea-tiempo {
+    list-style: none;
+    padding: 0;
+}
+
+.linea-tiempo li {
+    border-left: 1px solid #3a302c;
+    padding: 0 0 22px 22px;
+    position: relative;
+}
+
+.linea-tiempo li:last-child {
+    padding-bottom: 0;
+}
+
+.linea-tiempo li::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background-color: #a94747;
+    border-radius: 50%;
+}
+
+.linea-tiempo strong {
+    color: #d8b98c;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.pendiente {
+    color: #756c64;
+    font-style: italic;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: #d8b98c;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: #a94747;
+}
+
+@media (max-width: 800px) {
+    .datos-caso {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-expediente img {
+        height: 280px;
+    }
+}
