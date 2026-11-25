@@ -1,887 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Archivo 404 | Misterios sin Resolver</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav>
-            <div class="logo">ARCHIVO 404</div>
+      <div class="logo">ARCHIVO 404</div>
 
-            <ul>
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="#casos">ARCHIVOS</a></li>
-                <li><a href="#casos">DESTACADOS</a></li>
-                <li><a href="#sobre">SOBRE EL ARCHIVO</a></li>
-                <li><a href="#fuentes">FUENTES</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Navegación Principal">
+        <a href="index.html">Inicio</a>
+
+        <a href="documentos.html">Documentos</a>
+
+        <a href="sobre.html">Sobre el Archivo</a>
+
+        <a href="fuentes.html">Fuentes</a>
+      </nav>
     </header>
 
     <main>
+      <section class="hero">
+        <p class="numero">ARCHIVE #000</p>
 
-        <!-- ==================== INICIO ==================== -->
-        <section class="hero" id="inicio">
-            <p class="numero">ARCHIVE #000</p>
+        <h1>MISTERIOS<br />SIN RESOLVER</h1>
 
-            <h1>MISTERIOS<br>SIN RESOLVER</h1>
+        <p class="descripcion">
+          Algunos expedientes nunca encontraron un cierre.
+        </p>
 
-            <p class="descripcion">
-                Algunos expedientes nunca encontraron un cierre.
-            </p>
+        <a href="documentos.html" class="boton">EXPLORAR ARCHIVOS</a>
+      </section>
 
-            <a href="#casos" class="boton">EXPLORAR ARCHIVOS</a>
-        </section>
+      <section class="destacados">
+        <div class="titulo-seccion">
+          <p>EXPEDIENTES</p>
 
+          <h2>CASOS DESTACADOS</h2>
+        </div>
 
-        <!-- ==================== CASOS DESTACADOS ==================== -->
-        <section class="destacados" id="casos">
-
-            <div class="titulo-seccion">
-                <p>EXPEDIENTES</p>
-                <h2>CASOS DESTACADOS</h2>
+        <div class="casos">
+          <article class="tarjeta">
+            <div class="imagen-caso">
+              <img src="image/jack.png" alt="Ilustración histórica de Jack the Ripper" />
             </div>
 
-            <div class="casos">
+            <div class="contenido-tarjeta">
+              <span>ARCHIVE #001</span>
 
-                <article class="tarjeta">
-                    <div class="imagen-caso">
-                        <img src="imagenes/jack.png" alt="Ilustración histórica de Jack the Ripper">
-                    </div>
+              <h3>Jack the Ripper</h3>
 
-                    <div class="contenido-tarjeta">
-                        <span>ARCHIVE #001</span>
-                        <h3>Jack the Ripper</h3>
-                        <p>Londres, Inglaterra · 1888</p>
-                        <a href="#caso-001">VER CASO →</a>
-                    </div>
-                </article>
+              <p>Londres, Inglaterra · 1888</p>
 
+              <a href="caso-001.html">Ver caso →</a>
+            </div>
+          </article>
 
-                <article class="tarjeta">
-                    <div class="imagen-caso">
-                        <img src="imagenes/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía">
-                    </div>
-
-                    <div class="contenido-tarjeta">
-                        <span>ARCHIVE #002</span>
-                        <h3>Zodiac Killer</h3>
-                        <p>California, EE. UU. · 1968</p>
-                        <a href="#caso-002">VER CASO →</a>
-                    </div>
-                </article>
-
-
-                <article class="tarjeta">
-                    <div class="imagen-caso">
-                        <img src="imagenes/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia">
-                    </div>
-
-                    <div class="contenido-tarjeta">
-                        <span>ARCHIVE #003</span>
-                        <h3>Black Dahlia</h3>
-                        <p>Los Ángeles, EE. UU. · 1947</p>
-                        <a href="#caso-003">VER CASO →</a>
-                    </div>
-                </article>
-
+          <article class="tarjeta">
+            <div class="imagen-caso">
+              <img src="image/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía" />
             </div>
 
-        </section>
+            <div class="contenido-tarjeta">
+              <span>ARCHIVE #002</span>
 
+              <h3>Zodiac Killer</h3>
 
-        <!-- ==================== EXPEDIENTE 001 ==================== -->
-        <section class="expediente" id="caso-001">
+              <p>California, EE. UU. · 1968</p>
 
-            <header class="expediente-cabecera">
-                <p class="numero">ARCHIVE #001</p>
+              <a href="caso-002.html">Ver caso →</a>
+            </div>
+          </article>
 
-                <h1>Jack the Ripper</h1>
+          <article class="tarjeta">
+            <div class="imagen-caso">
+              <img src="image/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia" />
+            </div>
 
-                <dl class="datos-caso">
-                    <div class="dato">
-                        <dt>Archivo</dt>
-                        <dd>ARCHIVE #001</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Nombre del caso</dt>
-                        <dd>Jack the Ripper</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Estado</dt>
-                        <dd class="estado">UNSOLVED</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Ubicación</dt>
-                        <dd>Londres, Inglaterra</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Año</dt>
-                        <dd>1888</dd>
-                    </div>
-                </dl>
-            </header>
+            <div class="contenido-tarjeta">
+              <span>ARCHIVE #003</span>
 
-            <figure class="imagen-expediente">
-                <img src="imagenes/jack.png" alt="Ilustración histórica de Jack the Ripper">
-                <figcaption>Imagen del expediente — Jack the Ripper</figcaption>
-            </figure>
+              <h3>Black Dahlia</h3>
 
-            <section class="seccion-caso">
-                <h2>EL CASO</h2>
-                <p>
-                    Mató al menos a cinco mujeres en Whitechapel en 1888 y nunca fue capturado.
-                    Los asesinatos ocurrieron entre agosto y noviembre de 1888. La policía cerró
-                    oficialmente los archivos en 1892.
-                </p>
-            </section>
+              <p>Los Ángeles, EE. UU. · 1947</p>
 
-            <section class="seccion-caso">
-                <h2>LÍNEA DE TIEMPO</h2>
-                <ul class="linea-tiempo">
-                    <li>
-                        <strong>1888 — Agosto a noviembre</strong>
-                        Ocurren los asesinatos en Whitechapel, Londres.
-                    </li>
-                    <li>
-                        <strong>1888</strong>
-                        Aparece la carta “Dear Boss”, la primera vez que se usa el nombre
-                        “Jack the Ripper”. La policía la toma en serio cuando la cuarta víctima,
-                        Catherine Eddowes, aparece con parte de la oreja cortada.
-                    </li>
-                    <li>
-                        <strong>Noviembre de 1888</strong>
-                        Se catalogó el informe post mortem con la referencia MEPO 3/141.
-                    </li>
-                    <li>
-                        <strong>1892</strong>
-                        La policía cierra oficialmente los archivos del caso.
-                    </li>
-                    <li>
-                        <strong>2024</strong>
-                        Aparece un expediente policial perdido que perteneció al inspector
-                        Joseph Helson.
-                    </li>
-                </ul>
-            </section>
+              <a href="caso-003.html">Ver caso →</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-            <section class="seccion-caso">
-                <h2>EVIDENCIAS</h2>
+      <section class="sobre">
+        <p>ARCHIVO 404</p>
 
-                <h3>Carta “Dear Boss”</h3>
-                <p>
-                    Fue la primera vez que se usó el nombre “Jack the Ripper”. La policía la tomó
-                    en serio cuando la cuarta víctima, Catherine Eddowes, apareció con parte de la
-                    oreja cortada. Está en los Archivos Nacionales de Kew (ref. MEPO 3/3153).
-                </p>
+        <h2>¿QUÉ ES EL ARCHIVO?</h2>
 
-                <h3>Carta a la Whitechapel Vigilance Committee</h3>
-                <p>
-                    Hay una carta firmada como “Jack el Destripador” dirigida al Dr. Openshaw del
-                    London Hospital sobre el riñón humano enviado a G. Lusk (ref. MEPO 3/3157).
-                </p>
+        <p>
+          Archivo 404 es una recopilación de casos reales que permanecen
+          sin resolver. Explora los hechos, las evidencias, las teorías
+          y las preguntas que todavía permanecen abiertas.
+        </p>
 
-                <h3>Informe post mortem</h3>
-                <p>
-                    El informe de noviembre de 1888 está catalogado como MEPO 3/141.
-                </p>
-
-                <h3>Archivo recuperado</h3>
-                <p>
-                    En 2024 apareció un expediente policial perdido, que perteneció al inspector
-                    Joseph Helson.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>INVESTIGACIÓN</h2>
-                <p>
-                    La policía tomó en serio la carta “Dear Boss” cuando la cuarta víctima,
-                    Catherine Eddowes, apareció con parte de la oreja cortada. Los archivos del
-                    caso se cerraron oficialmente en 1892.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>TEORÍAS</h2>
-                <ul>
-                    <li>
-                        <strong>Aaron Kosminski:</strong> peluquero polaco internado en un asilo. En
-                        2014 se afirmó que un ADN en un chal lo vinculaba con el caso, pero el
-                        análisis es muy criticado y no es concluyente.
-                    </li>
-                    <li>
-                        <strong>Montague Druitt:</strong> abogado y maestro hallado muerto en el
-                        Támesis a finales de 1888. Algunos sostienen que su muerte explica el fin de
-                        los crímenes, pero hay poca evidencia directa.
-                    </li>
-                    <li>
-                        <strong>Francis Tumblety:</strong> médico estadounidense sospechoso en su
-                        época, sin pruebas que lo ubiquen en los crímenes.
-                    </li>
-                    <li>
-                        <strong>Walter Sickert:</strong> pintor señalado por especulaciones
-                        modernas, rechazadas por la mayoría de los historiadores.
-                    </li>
-                    <li>
-                        <strong>Conspiración real o masónica:</strong> sugiere que el crimen
-                        involucraba a la corona. Está desacreditada por falta de fundamento.
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>PREGUNTAS SIN RESPUESTA</h2>
-                <ul>
-                    <li>¿Quién fue el asesino y actuó solo?</li>
-                    <li>¿Por qué cesaron los crímenes tras noviembre de 1888?</li>
-                    <li>
-                        ¿Cuántas víctimas hubo realmente? Se aceptan cinco “canónicas”, pero otras
-                        muertes se debaten.
-                    </li>
-                    <li>
-                        ¿Son auténticas las cartas “Dear Boss” (Querido Jefe) y “From Hell” (Desde
-                        el infierno) o fueron bromas?
-                    </li>
-                    <li>
-                        ¿Qué significa la inscripción de Goulston Street y por qué importó el trozo
-                        de delantal de Catherine Eddowes?
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>FUENTES</h2>
-                <ul>
-                    <li>Yahoo — “Jack the Ripper police file made public after 136 years”.</li>
-                    <li>National Archives — carta “Dear Boss” (MEPO 3/3153).</li>
-                    <li>National Archives — carta a la Whitechapel Vigilance Committee (MEPO 3/3157).</li>
-                    <li>National Archives — informe post mortem de noviembre de 1888 (MEPO 3/141).</li>
-                    <li>Casebook.org — repositorio público sobre el caso: víctimas, sospechosos, cartas y documentos.</li>
-                    <li>Philip Sugden, <em>The Complete History of Jack the Ripper</em>.</li>
-                </ul>
-            </section>
-
-            <a class="volver" href="#casos">← VOLVER A LOS CASOS</a>
-
-        </section>
-
-
-        <!-- ==================== EXPEDIENTE 002 ==================== -->
-        <section class="expediente" id="caso-002">
-
-            <header class="expediente-cabecera">
-                <p class="numero">ARCHIVE #002</p>
-
-                <h1>Zodiac Killer</h1>
-
-                <dl class="datos-caso">
-                    <div class="dato">
-                        <dt>Archivo</dt>
-                        <dd>ARCHIVE #002</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Nombre del caso</dt>
-                        <dd>Zodiac Killer</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Estado</dt>
-                        <dd class="estado">UNSOLVED</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Ubicación</dt>
-                        <dd>California, EE. UU.</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Año</dt>
-                        <dd>1968–1969</dd>
-                    </div>
-                </dl>
-            </header>
-
-            <figure class="imagen-expediente">
-                <img src="imagenes/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía">
-                <figcaption>Imagen del expediente — Zodiac Killer</figcaption>
-            </figure>
-
-            <section class="seccion-caso">
-                <h2>EL CASO</h2>
-                <p>
-                    El FBI atribuye cinco muertes en el Área de la Bahía, pero en una carta él dijo
-                    haber matado hasta 37 personas. Su identidad sigue siendo desconocida.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>LÍNEA DE TIEMPO</h2>
-                <ul class="linea-tiempo">
-                    <li>
-                        <strong>1968–1969</strong>
-                        El Zodiac Killer envía cartas y criptogramas a los periódicos.
-                    </li>
-                    <li>
-                        <strong>1969</strong>
-                        El San Francisco Chronicle recibe el cifrado “340”.
-                    </li>
-                    <li>
-                        <strong>Sin fecha registrada</strong>
-                        Un maestro de Salinas y su esposa resuelven el cifrado “408”.
-                    </li>
-                    <li>
-                        <strong>2020</strong>
-                        David Oranchak, Jarl Van Eycke y Sam Blake resuelven el cifrado “340”.
-                        El FBI verifica la solución, que no revela la identidad del asesino.
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>EVIDENCIAS</h2>
-
-                <h3>Cartas y criptogramas</h3>
-                <p>
-                    Envió mensajes cifrados a los periódicos. Uno de los cifrados usaba más de 50
-                    símbolos para representar las 26 letras.
-                </p>
-
-                <h3>Cifrado “340”</h3>
-                <p>
-                    Lo recibió el San Francisco Chronicle en 1969. Lo resolvieron en 2020 David
-                    Oranchak, Jarl Van Eycke y Sam Blake, y el FBI verificó la solución. No revela
-                    la identidad del asesino.
-                </p>
-
-                <h3>Cifrado “408”</h3>
-                <p>
-                    Lo resolvieron antes un maestro de Salinas y su esposa.
-                </p>
-
-                <h3>Trabajo del FBI</h3>
-                <p>
-                    Nunca abrió un caso propio, pero apoyó a la policía local con análisis de
-                    escritura, criptoanálisis y huellas. El FBI dice que el caso sigue siendo una
-                    investigación activa.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>INVESTIGACIÓN</h2>
-                <p>
-                    El FBI nunca abrió un caso propio, pero apoyó a la policía local con análisis de
-                    escritura, criptoanálisis y huellas. El FBI dice que el caso sigue siendo una
-                    investigación activa.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>TEORÍAS</h2>
-                <ul>
-                    <li>
-                        <strong>Arthur Leigh Allen:</strong> principal sospechoso de la policía por
-                        años. Su ADN y sus huellas no coincidieron con las pruebas disponibles.
-                    </li>
-                    <li>
-                        <strong>Gary Francis Poste:</strong> señalado en 2021 por un grupo de
-                        investigadores privados. La policía de San Francisco no lo aceptó.
-                    </li>
-                    <li>
-                        <strong>Lawrence Kane y otros nombres:</strong> propuestos por aficionados,
-                        sin pruebas sólidas.
-                    </li>
-                    <li>
-                        <strong>Múltiples autores:</strong> hay quien plantea que no todos los
-                        ataques ni cartas son del mismo individuo.
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>PREGUNTAS SIN RESPUESTA</h2>
-                <ul>
-                    <li>¿Cuál es su identidad?</li>
-                    <li>
-                        ¿Cuántas víctimas tuvo? Él se atribuyó 37, pero solo 5 muertes y 2
-                        sobrevivientes están confirmados.
-                    </li>
-                    <li>
-                        ¿Qué dicen los cifrados sin resolver? El Z340 se descifró en diciembre de
-                        2020, pero otros siguen abiertos.
-                    </li>
-                    <li>¿Por qué cesó la actividad tras principios de los años 70?</li>
-                    <li>¿Se asocia el caso de Cheri Jo Bates (1966) con él?</li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>FUENTES</h2>
-                <ul>
-                    <li>Kion546 — atribución de muertes y estado activo del caso según el FBI.</li>
-                    <li>Legends of America — cartas y criptogramas enviados a los periódicos.</li>
-                    <li>Morungexpress — resolución del cifrado “340” en 2020.</li>
-                    <li>Pressreader — resolución y verificación del cifrado “340”.</li>
-                    <li>Newschannel5 — cifrado “408” y apoyo del FBI a la policía local.</li>
-                    <li>Archivo del FBI — expediente del caso Zodiac Killer.</li>
-                    <li>Robert Graysmith, <em>Zodiac</em>.</li>
-                </ul>
-            </section>
-
-            <a class="volver" href="#casos">← VOLVER A LOS CASOS</a>
-
-        </section>
-
-
-        <!-- ==================== EXPEDIENTE 003 ==================== -->
-        <section class="expediente" id="caso-003">
-
-            <header class="expediente-cabecera">
-                <p class="numero">ARCHIVE #003</p>
-
-                <h1>Black Dahlia</h1>
-
-                <dl class="datos-caso">
-                    <div class="dato">
-                        <dt>Archivo</dt>
-                        <dd>ARCHIVE #003</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Nombre del caso</dt>
-                        <dd>Black Dahlia</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Estado</dt>
-                        <dd class="estado">UNSOLVED</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Ubicación</dt>
-                        <dd>Los Ángeles, EE. UU.</dd>
-                    </div>
-                    <div class="dato">
-                        <dt>Año</dt>
-                        <dd>1947</dd>
-                    </div>
-                </dl>
-            </header>
-
-            <figure class="imagen-expediente">
-                <img src="imagenes/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia">
-                <figcaption>Imagen del expediente — Elizabeth Short, “Black Dahlia”</figcaption>
-            </figure>
-
-            <section class="seccion-caso">
-                <h2>EL CASO</h2>
-                <p>
-                    Elizabeth Short (1924–1947), nacida en Boston, Massachusetts, se mudó a Los
-                    Ángeles con el sueño de ser actriz. La prensa la apodó “Dalia Negra”, al parecer
-                    por la película <em>The Blue Dahlia</em> (1946) y por su pelo negro y su ropa
-                    oscura.
-                </p>
-                <p>
-                    El 9 de enero de 1947 la vieron por última vez en el hotel Biltmore, en Los
-                    Ángeles. Robert “Red” Manley la había llevado hasta allí. El 15 de enero de
-                    1947, una vecina, Betty Bersinger, encontró el cuerpo en un terreno baldío de
-                    Leimert Park. Estaba cortado en dos a la altura de la cintura, sin sangre y
-                    lavado, y tenía cortes en la boca hasta las orejas. El cuerpo estaba colocado de
-                    forma deliberada. La causa de muerte fue hemorragia por heridas en el rostro y
-                    golpes en la cabeza.
-                </p>
-                <p>
-                    El caso sigue sin resolverse y es uno de los más famosos de Estados Unidos.
-                    Inspiró libros y películas, como <em>The Black Dahlia</em> (2006).
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>LÍNEA DE TIEMPO</h2>
-                <ul class="linea-tiempo">
-                    <li>
-                        <strong>1924</strong>
-                        Nace Elizabeth Short en Boston, Massachusetts.
-                    </li>
-                    <li>
-                        <strong>9 de enero de 1947</strong>
-                        La ven por última vez en el hotel Biltmore, Los Ángeles. Robert “Red”
-                        Manley la había llevado hasta allí.
-                    </li>
-                    <li>
-                        <strong>15 de enero de 1947</strong>
-                        Betty Bersinger encuentra el cuerpo en un terreno baldío de Leimert Park.
-                    </li>
-                    <li>
-                        <strong>24 de enero de 1947</strong>
-                        Llega al <em>Los Angeles Examiner</em> un paquete con las pertenencias de
-                        Elizabeth Short.
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>EVIDENCIAS</h2>
-
-                <h3>El cuerpo y su posición</h3>
-                <p>
-                    Las heridas, la ausencia de sangre y el hecho de que estuviera lavado y colocado
-                    mostraban que el asesino la había matado en otro lugar. También sugerían
-                    conocimientos de anatomía, lo que alimentó la sospecha sobre un médico.
-                </p>
-
-                <h3>Huellas dactilares</h3>
-                <p>
-                    El FBI identificó a Elizabeth Short comparando sus huellas con las de una
-                    solicitud de trabajo que había hecho tiempo atrás.
-                </p>
-
-                <h3>El paquete enviado a la prensa</h3>
-                <p>
-                    El 24 de enero llegó al <em>Los Angeles Examiner</em> un paquete con su
-                    certificado de nacimiento, tarjetas, fotos y una libreta de direcciones. Venía
-                    con una nota hecha con letras recortadas de periódico (“Here is Dahlia's
-                    belongings”) y las cosas estaban limpiadas con gasolina para borrar huellas.
-                </p>
-
-                <h3>Pruebas en la escena y objetos hallados</h3>
-                <p>
-                    Cerca del cuerpo había una bolsa de cemento con manchas de sangre, además de
-                    marcas de pisadas y de llantas. Días después aparecieron su bolso y sus zapatos
-                    en un basurero.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>INVESTIGACIÓN</h2>
-                <p>
-                    El LAPD siguió miles de pistas y recibió decenas de falsas confesiones. Hubo
-                    muchos sospechosos, entre ellos Robert Manley (descartado), Mark Hansen y el
-                    doctor George Hodel (señalado años después por su propio hijo, Steve Hodel).
-                    Ninguno fue condenado.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>TEORÍAS</h2>
-                <p>
-                    El estado del cuerpo sugería conocimientos de anatomía, lo que alimentó la
-                    sospecha sobre un médico.
-                </p>
-                <p>
-                    El doctor George Hodel fue señalado años después por su propio hijo, Steve
-                    Hodel.
-                </p>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>PREGUNTAS SIN RESPUESTA</h2>
-                <ul>
-                    <li>¿Quién mató a Elizabeth Short en 1947?</li>
-                    <li>
-                        ¿Dónde estuvo entre su desaparición y el hallazgo del cuerpo, y dónde la
-                        mataron? No había sangre en el lugar donde apareció.
-                    </li>
-                    <li>
-                        ¿Por qué le hicieron lesiones tan específicas y cortaron el cuerpo en dos?
-                    </li>
-                    <li>
-                        ¿Son auténticas las notas del supuesto “Vengador de la Dalia Negra” enviadas
-                        a la prensa?
-                    </li>
-                    <li>
-                        Robert “Red” Manley, el último que la vio, fue investigado y descartado
-                        tras pasar varios polígrafos. ¿Por qué no se concretaron otros
-                        sospechosos?
-                    </li>
-                    <li>
-                        ¿Cuántas de las muchas confesiones falsas se investigaron a fondo?
-                    </li>
-                </ul>
-            </section>
-
-            <section class="seccion-caso">
-                <h2>FUENTES</h2>
-                <ul>
-                    <li>FBI Records: The Vault — archivo del caso Black Dahlia.</li>
-                    <li>
-                        Steve Hodel, <em>Black Dahlia Avenger</em> (2003), que acusa a su padre;
-                        muy debatido.
-                    </li>
-                    <li>John Gilmore, <em>Severed</em> (1994).</li>
-                    <li>Piu Eatwell, <em>Black Dahlia, Red Rose</em> (2017).</li>
-                    <li>Archivo del <em>Los Angeles Times</em> sobre el caso.</li>
-                </ul>
-            </section>
-
-            <a class="volver" href="#casos">← VOLVER A LOS CASOS</a>
-
-        </section>
-
-
-        <!-- ==================== SOBRE EL ARCHIVO ==================== -->
-        <section class="pagina-texto" id="sobre">
-            <p class="numero">ARCHIVO 404</p>
-            <h1>SOBRE EL ARCHIVO</h1>
-            <p class="descripcion">
-                Un espacio para los expedientes que nunca encontraron un cierre.
-            </p>
-
-            <section>
-                <h2>¿QUÉ ES ARCHIVO 404?</h2>
-                <p>
-                    Archivo 404 es una recopilación de casos reales que permanecen sin resolver.
-                    Explora los hechos, las evidencias, las teorías y las preguntas que todavía
-                    permanecen abiertas. El nombre hace referencia a esos expedientes que, como una
-                    página que no se encuentra, siguen sin una respuesta definitiva.
-                </p>
-            </section>
-
-            <section>
-                <h2>OBJETIVO DEL PROYECTO</h2>
-                <p>
-                    Reunir y ordenar la información disponible sobre casos sin resolver para que
-                    cualquier persona pueda consultarla de forma clara, sin presentar como
-                    definitivo lo que todavía no lo está.
-                </p>
-            </section>
-
-            <section>
-                <h2>QUÉ TIPO DE CASOS RECOPILA</h2>
-                <p>
-                    Casos reales de carácter histórico y criminal que permanecen abiertos o cuya
-                    resolución es discutida. Los expedientes reunidos proceden de lugares y épocas
-                    distintos, y comparten la misma condición: no existe una respuesta cerrada y
-                    aceptada de forma unánime.
-                </p>
-            </section>
-
-            <section>
-                <h2>QUÉ SIGNIFICA “SIN RESOLVER”</h2>
-                <p>
-                    Que un caso figure como <strong>UNSOLVED</strong> significa que no se ha
-                    identificado y condenado a un responsable, o que la explicación oficial
-                    existente es objeto de debate. No significa que no se haya investigado: muchos
-                    de estos expedientes fueron archivados después de largas investigaciones y
-                    algunos permanecen abiertos hasta hoy.
-                </p>
-            </section>
-
-            <section>
-                <h2>CÓMO SE ORGANIZA LA INFORMACIÓN</h2>
-                <p>
-                    Cada expediente sigue la misma estructura: número de archivo, nombre del caso,
-                    estado, ubicación, año, imagen, resumen de lo ocurrido, línea de tiempo,
-                    evidencias, investigación, teorías, preguntas sin respuesta y fuentes. Así,
-                    todos los casos se pueden leer y comparar de la misma manera.
-                </p>
-            </section>
-
-            <section>
-                <h2>HECHOS, TEORÍAS E HIPÓTESIS</h2>
-                <p>
-                    Diferenciarlos es fundamental. Los <strong>hechos</strong> son los datos
-                    comprobados y documentados. Las <strong>teorías</strong> son explicaciones
-                    construidas a partir de esos datos. Las <strong>hipótesis</strong> son
-                    posibilidades que todavía no han sido demostradas. Mantenerlos separados
-                    permite consultar la información sin confundir lo que ocurrió con lo que se
-                    supone que ocurrió.
-                </p>
-            </section>
-
-            <section>
-                <h2>LA EXPERIENCIA DEL USUARIO</h2>
-                <p>
-                    El archivo busca una lectura pausada y ordenada, parecida a la consulta de un
-                    expediente. Cada caso se presenta de forma uniforme y se pueden consultar las
-                    fuentes de donde proviene la información, para que quien explore pueda decidir
-                    por sí mismo qué peso dar a cada dato.
-                </p>
-            </section>
-
-            <a class="volver" href="#inicio">← VOLVER ARRIBA</a>
-
-        </section>
-
-
-        <!-- ==================== FUENTES ==================== -->
-        <section class="pagina-texto" id="fuentes">
-            <p class="numero">ARCHIVO 404</p>
-            <h1>FUENTES</h1>
-            <p class="descripcion">
-                Registro de las fuentes consultadas para la investigación de cada caso.
-            </p>
-
-            <section>
-                <h2>FUENTES POR CASO</h2>
-                <p>
-                    Cada fuente indica el expediente del que proviene y el material que aportó.
-                    Solo se han registrado aquí las fuentes citadas en la investigación de los
-                    casos.
-                </p>
-
-                <table class="tabla-fuentes">
-                    <thead>
-                        <tr>
-                            <th>Caso</th>
-                            <th>Fuente</th>
-                            <th>Tipo</th>
-                            <th>Material aportado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>Yahoo</td>
-                            <td>Artículo periodístico</td>
-                            <td>“Jack the Ripper police file made public after 136 years” y expediente policial recuperado en 2024.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>National Archives</td>
-                            <td>Archivo histórico</td>
-                            <td>Carta “Dear Boss” (MEPO 3/3153).</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>National Archives</td>
-                            <td>Archivo histórico</td>
-                            <td>Carta a la Whitechapel Vigilance Committee (MEPO 3/3157).</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>National Archives</td>
-                            <td>Archivo histórico</td>
-                            <td>Informe post mortem de noviembre de 1888 (MEPO 3/141).</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>Casebook.org</td>
-                            <td>Otra fuente confiable</td>
-                            <td>Repositorio público sobre víctimas, sospechosos, cartas y documentos del caso.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>Philip Sugden, <em>The Complete History of Jack the Ripper</em></td>
-                            <td>Libro de investigación</td>
-                            <td>Historia completa del caso y análisis de los sospechosos.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Kion546</td>
-                            <td>Artículo periodístico</td>
-                            <td>Muertes atribuidas por el FBI y estado activo de la investigación.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Legends of America</td>
-                            <td>Otra fuente confiable</td>
-                            <td>Cartas y criptogramas enviados a los periódicos.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Morungexpress</td>
-                            <td>Artículo periodístico</td>
-                            <td>Resolución del cifrado “340” en 2020.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Pressreader</td>
-                            <td>Artículo periodístico</td>
-                            <td>Resolución del cifrado “340” y verificación del FBI.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Newschannel5</td>
-                            <td>Artículo periodístico</td>
-                            <td>Cifrado “408” y apoyo del FBI a la policía local.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Archivo del FBI</td>
-                            <td>Fuente policial/oficial</td>
-                            <td>Expediente del caso Zodiac Killer.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Robert Graysmith, <em>Zodiac</em></td>
-                            <td>Libro de investigación</td>
-                            <td>Investigación del caso y de los cifrados.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>FBI Records: The Vault</td>
-                            <td>Fuente policial/oficial</td>
-                            <td>Archivo del caso Black Dahlia.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>Steve Hodel, <em>Black Dahlia Avenger</em> (2003)</td>
-                            <td>Libro de investigación</td>
-                            <td>Acusa a su padre, George Hodel; muy debatido.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>John Gilmore, <em>Severed</em> (1994)</td>
-                            <td>Libro de investigación</td>
-                            <td>Investigación del caso y posibles vínculos.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>Piu Eatwell, <em>Black Dahlia, Red Rose</em> (2017)</td>
-                            <td>Libro de investigación</td>
-                            <td>Revisión del caso y de los sospechosos.</td>
-                        </tr>
-                        <tr>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>Archivo del <em>Los Angeles Times</em></td>
-                            <td>Artículo periodístico</td>
-                            <td>Cobertura histórica del caso.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section>
-                <h2>FOTOGRAFÍAS UTILIZADAS</h2>
-                <table class="tabla-fuentes">
-                    <thead>
-                        <tr>
-                            <th>Archivo</th>
-                            <th>Caso</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>imagenes/jack.png</td>
-                            <td>ARCHIVE #001 — Jack the Ripper</td>
-                            <td>Ilustración histórica de Jack the Ripper.</td>
-                        </tr>
-                        <tr>
-                            <td>imagenes/zodiac.png</td>
-                            <td>ARCHIVE #002 — Zodiac Killer</td>
-                            <td>Retrato hablado del Zodiac Killer realizado por la policía.</td>
-                        </tr>
-                        <tr>
-                            <td>imagenes/elizabeth.png</td>
-                            <td>ARCHIVE #003 — Black Dahlia</td>
-                            <td>Fotografía de Elizabeth Short, conocida como Black Dahlia.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <a class="volver" href="#inicio">← VOLVER ARRIBA</a>
-
-        </section>
-
+        <a href="sobre.html" class="boton-secundario">CONOCER EL ARCHIVO</a>
+      </section>
     </main>
 
-
     <footer>
-        <p>ARCHIVO 404 — MISTERIOS SIN RESOLVER</p>
-        <p>Proyecto de Diseño de Experiencias de Usuario</p>
-    </footer>
+      <p>ARCHIVO 404 — MISTERIOS SIN RESOLVER</p>
 
-</body>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="index.html">Inicio</a>
+
+        <a href="documentos.html">Documentos</a>
+
+        <a href="sobre.html">Sobre el Archivo</a>
+
+        <a href="fuentes.html">Fuentes</a>
+      </nav>
+
+      <p>© 2026 Archivo 404</p>
+    </footer>
+  </body>
+
 </html>

@@ -1,170 +1,182 @@
-/* ================================
-   ARCHIVO 404
-   Estilos generales
-================================ */
+/*=============================
+  |  |  |NORMALIZACION BASICA
+==============================*/
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+/*=============================
+  |  |  |Variables de color
+==============================*/
+:root {
+    --color-base: #11100f;
+    --color-surface: #1a1817;
+    --color-surface-alt: #292522;
+
+    --color-accent: #a94747;
+    --color-accent-dark: #7d292d;
+    --color-gold: #d8b98c;
+
+    --color-text: #e8e0d4;
+    --color-text-strong: #eee5da;
+    --color-muted: #a99e94;
+    --color-muted-dark: #756c64;
+
+    --color-border: #3a302c;
 }
 
+/*=============================
+  |  |  |Estilos gen del doc.
+==============================*/
+
 body {
-    background-color: #11100f;
-    color: #e8e0d4;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-base);
     line-height: 1.6;
 }
 
-
-/* ================================
-   NAVEGACIÓN
-================================ */
-
-header {
-    width: 100%;
-    border-bottom: 1px solid #3a302c;
-    background-color: #11100f;
+/*=============================
+  |  |  |Imagenes
+==============================*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 22px 30px;
-
+/*=============================
+  |  |  |header
+==============================*/
+header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--color-base);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
-    color: #d8b98c;
+    color: var(--color-gold);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
-nav ul {
-    list-style: none;
+header nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-nav ul li a {
-    color: #cfc4b8;
+header a {
+    color: var(--color-text);
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1px;
-    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #a94747;
+header a:hover,
+header a:focus {
+    color: var(--color-accent);
 }
 
-
-/* ================================
-   HERO
-================================ */
-
-.hero {
-    min-height: 700px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px 30px;
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 1.5px solid var(--color-gold);
+    outline-offset: 3px;
 }
 
-.numero {
-    color: #a94747;
+/*=============================
+  |  |  |Main
+==============================*/
+main {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+/* =====================================================
+                    HERO
+===================================================== */
+main > section.hero {
+    padding: 6rem 0;
+}
+
+main > section.hero .numero {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
     font-size: 14px;
     letter-spacing: 4px;
-    margin-bottom: 20px;
 }
 
-.hero h1 {
+main > section.hero h1 {
+    margin: 0 0 2rem;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(55px, 9vw, 110px);
-    line-height: 0.95;
-    letter-spacing: -3px;
-    color: #eee5da;
-    margin-bottom: 35px;
+    font-size: clamp(2rem, 9vw, 6rem);
+    line-height: 1.05;
+    color: var(--color-text-strong);
 }
 
-.descripcion {
-    max-width: 500px;
-    color: #a99e94;
-    font-size: 18px;
-    margin-bottom: 40px;
+main > section.hero > p.descripcion {
+    max-width: 650px;
+    color: var(--color-muted);
+    font-size: 1.1rem;
 }
 
-
-/* ================================
-   BOTONES
-================================ */
-
-.boton {
+/*=============================
+  |  |  |BOTONES
+==============================*/
+.boton,
+.boton-secundario {
     display: inline-block;
     width: fit-content;
-
+    margin-top: 2rem;
     padding: 15px 28px;
-
-    background-color: #7d292d;
-    color: #f5eee5;
-
+    background-color: var(--color-accent-dark);
+    color: var(--color-text-strong);
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
-
-    transition: 0.3s;
 }
 
-.boton:hover {
-    background-color: #a94747;
-    transform: translateY(-2px);
+.boton-secundario {
+    background-color: transparent;
+    border: 1px solid var(--color-accent-dark);
+    color: var(--color-gold);
 }
 
-
-/* ================================
-   SECCIONES
-================================ */
-
-.destacados {
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px 30px;
+.boton:hover,
+.boton-secundario:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-strong);
 }
 
+/*=============================
+  |  |  |TARJETAS
+==============================*/
 .titulo-seccion {
-    margin-bottom: 45px;
+    margin-bottom: 2.5rem;
 }
 
 .titulo-seccion p {
-    color: #a94747;
+    margin: 0 0 0.5rem;
+    color: var(--color-accent);
     font-size: 13px;
     letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 .titulo-seccion h2 {
+    margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 45px;
-    color: #eee5da;
+    color: var(--color-text-strong);
 }
-
-
-/* ================================
-   TARJETAS
-================================ */
 
 .casos {
     display: grid;
@@ -173,288 +185,199 @@ nav ul li a:hover {
 }
 
 .tarjeta {
-    background-color: #1a1817;
-    border: 1px solid #3a302c;
-    transition: 0.3s;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
 }
 
 .tarjeta:hover {
-    transform: translateY(-6px);
-    border-color: #7d292d;
+    border-color: var(--color-accent-dark);
 }
 
 .imagen-caso {
     height: 280px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #292522;
-    color: #756c64;
-
-    font-size: 12px;
-    letter-spacing: 3px;
+    background-color: var(--color-surface-alt);
 }
+
 .imagen-caso img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
+
 .contenido-tarjeta {
     padding: 25px;
 }
 
 .contenido-tarjeta span {
-    color: #a94747;
+    color: var(--color-accent);
     font-size: 12px;
     letter-spacing: 2px;
 }
 
 .contenido-tarjeta h3 {
+    margin: 10px 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 28px;
-    margin: 10px 0;
-    color: #eee5da;
+    color: var(--color-text-strong);
 }
 
 .contenido-tarjeta p {
-    color: #91877f;
+    margin: 0 0 20px;
+    color: var(--color-muted);
     font-size: 14px;
-    margin-bottom: 20px;
 }
 
-.contenido-tarjeta a {
-    color: #d8b98c;
+.contenido-tarjeta a,
+.volver {
+    color: var(--color-gold);
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 2px;
 }
 
+.contenido-tarjeta a:hover,
+.volver:hover {
+    color: var(--color-accent);
+}
 
-/* ================================
-   SOBRE EL ARCHIVO
-================================ */
-
+/*=============================
+  |  |  |SECCION SOBRE (INICIO)
+==============================*/
 .sobre {
     max-width: 900px;
     margin: 100px auto;
     padding: 80px 30px;
-
     text-align: center;
-
-    border-top: 1px solid #3a302c;
-    border-bottom: 1px solid #3a302c;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .sobre > p:first-child {
-    color: #a94747;
+    margin: 0 0 15px;
+    color: var(--color-accent);
     font-size: 13px;
     letter-spacing: 4px;
-    margin-bottom: 15px;
 }
 
 .sobre h2 {
+    margin: 0 0 25px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 45px;
-    margin-bottom: 25px;
+    color: var(--color-text-strong);
 }
 
 .sobre p {
-    color: #9c9289;
     max-width: 650px;
     margin: 0 auto 30px;
+    color: var(--color-muted);
 }
 
-.boton-secundario {
-    display: inline-block;
-    padding: 13px 25px;
-
-    border: 1px solid #7d292d;
-    color: #d8b98c;
-
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-
-    transition: 0.3s;
-}
-
-.boton-secundario:hover {
-    background-color: #7d292d;
-    color: #f5eee5;
-}
-
-
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-    border-top: 1px solid #3a302c;
-    padding: 35px 30px;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
-    color: #756c64;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-
-/* ================================
-   DISEÑO RESPONSIVO
-================================ */
-
-@media (max-width: 800px) {
-
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero {
-        min-height: 600px;
-        padding: 80px 25px;
-    }
-
-    .hero h1 {
-        font-size: 60px;
-    }
-
-    .casos {
-        grid-template-columns: 1fr;
-    }
-
-    .destacados {
-        padding: 70px 25px;
-    }
-
-    .titulo-seccion h2 {
-        font-size: 38px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-
-/* ================================
-   EXPEDIENTES INDIVIDUALES
-================================ */
-
+/*=============================
+  |  |  |EXPEDIENTES
+==============================*/
 .expediente {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 30px 100px;
+    padding: 5rem 0;
 }
 
 .expediente-cabecera {
-    border-bottom: 1px solid #3a302c;
-    padding-bottom: 35px;
-    margin-bottom: 45px;
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .expediente-cabecera .numero {
-    margin-bottom: 15px;
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-size: 14px;
+    letter-spacing: 4px;
 }
 
 .expediente-cabecera h1 {
+    margin: 0 0 2rem;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(40px, 6vw, 70px);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.05;
-    color: #eee5da;
-    margin-bottom: 30px;
+    color: var(--color-text-strong);
 }
 
 .datos-caso {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px 40px;
+    margin: 0;
 }
 
 .dato {
-    border-left: 2px solid #7d292d;
     padding-left: 14px;
+    border-left: 2px solid var(--color-accent-dark);
 }
 
 .dato dt {
-    color: #756c64;
+    color: var(--color-muted-dark);
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .dato dd {
-    color: #e8e0d4;
+    margin: 0;
+    color: var(--color-text);
     font-size: 15px;
 }
 
 .dato .estado {
-    color: #a94747;
+    color: var(--color-accent);
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .imagen-expediente {
-    margin: 0 0 55px;
-    background-color: #292522;
-    border: 1px solid #3a302c;
+    margin: 0 0 3rem;
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
 }
 
 .imagen-expediente img {
     width: 100%;
     height: 420px;
     object-fit: cover;
-    display: block;
 }
 
 .imagen-expediente figcaption {
     padding: 12px 18px;
-    color: #756c64;
+    color: var(--color-muted-dark);
     font-size: 11px;
     letter-spacing: 1px;
 }
 
 .seccion-caso {
-    margin-bottom: 55px;
+    margin-bottom: 3.5rem;
 }
 
 .seccion-caso h2 {
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.75rem;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 28px;
-    color: #d8b98c;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #3a302c;
+    color: var(--color-gold);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .seccion-caso h3 {
+    margin: 1.5rem 0 0.5rem;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 18px;
-    color: #eee5da;
-    margin: 25px 0 8px;
+    color: var(--color-text-strong);
 }
 
 .seccion-caso p,
 .seccion-caso li {
-    color: #a99e94;
+    color: var(--color-muted);
     font-size: 15px;
 }
 
 .seccion-caso p {
-    margin-bottom: 12px;
+    margin: 0 0 0.75rem;
 }
 
 .seccion-caso ul:not(.linea-tiempo) {
@@ -466,14 +389,15 @@ footer {
 }
 
 .linea-tiempo {
-    list-style: none;
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .linea-tiempo li {
-    border-left: 1px solid #3a302c;
-    padding: 0 0 22px 22px;
     position: relative;
+    padding: 0 0 22px 22px;
+    border-left: 1px solid var(--color-border);
 }
 
 .linea-tiempo li:last-child {
@@ -487,37 +411,148 @@ footer {
     top: 7px;
     width: 7px;
     height: 7px;
-    background-color: #a94747;
+    background-color: var(--color-accent);
     border-radius: 50%;
 }
 
 .linea-tiempo strong {
-    color: #d8b98c;
     display: block;
+    margin-bottom: 4px;
+    color: var(--color-gold);
     font-size: 13px;
     letter-spacing: 1px;
-    margin-bottom: 4px;
 }
 
-.pendiente {
-    color: #756c64;
-    font-style: italic;
+/*=============================
+  |  |  |SOBRE EL ARCHIVO / FUENTES
+==============================*/
+.pagina-texto {
+    padding: 5rem 0;
 }
 
-.volver {
-    display: inline-block;
-    margin-top: 20px;
-    color: #d8b98c;
-    font-size: 12px;
+.pagina-texto > .numero {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.pagina-texto > h1 {
+    margin: 0 0 1rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.05;
+    color: var(--color-text-strong);
+}
+
+.pagina-texto > .descripcion {
+    max-width: 650px;
+    margin: 0 0 3.5rem;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+}
+
+.pagina-texto section {
+    margin-bottom: 3rem;
+}
+
+.pagina-texto h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.75rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    color: var(--color-gold);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pagina-texto p {
+    margin: 0 0 0.75rem;
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+.pagina-texto strong {
+    color: var(--color-text);
+}
+
+.tabla-fuentes {
+    width: 100%;
+    margin-top: 1.25rem;
+    border-collapse: collapse;
+}
+
+.tabla-fuentes th,
+.tabla-fuentes td {
+    padding: 13px 15px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+    border: 1px solid var(--color-border);
+}
+
+.tabla-fuentes th {
+    background-color: var(--color-surface);
+    color: var(--color-gold);
+    font-size: 11px;
+    font-weight: normal;
     letter-spacing: 2px;
+}
+
+.tabla-fuentes td {
+    color: var(--color-muted);
+}
+
+.tabla-fuentes td:first-child {
+    color: var(--color-text-strong);
+}
+
+/*=============================
+  |  |  |footer
+==============================*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 2rem 5%;
+    color: var(--color-muted-dark);
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--color-border);
+}
+
+footer nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer a {
+    color: var(--color-muted-dark);
     text-decoration: none;
 }
 
-.volver:hover {
-    color: #a94747;
+footer a:hover,
+footer a:focus {
+    color: var(--color-accent);
 }
 
+/*=============================
+  |  |  |DISEÑO RESPONSIVO
+==============================*/
 @media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .casos {
+        grid-template-columns: 1fr;
+    }
+
     .datos-caso {
         grid-template-columns: 1fr;
     }
@@ -525,97 +560,18 @@ footer {
     .imagen-expediente img {
         height: 280px;
     }
-}
-
-
-/* ================================
-   SOBRE EL ARCHIVO / FUENTES
-================================ */
-
-.pagina-texto {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 30px 100px;
-}
-
-.pagina-texto > h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(40px, 6vw, 65px);
-    line-height: 1.05;
-    color: #eee5da;
-    margin: 15px 0 20px;
-}
-
-.pagina-texto > .descripcion {
-    margin-bottom: 55px;
-}
-
-.pagina-texto section {
-    margin-bottom: 50px;
-}
-
-.pagina-texto h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 26px;
-    color: #d8b98c;
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #3a302c;
-}
-
-.pagina-texto p {
-    color: #a99e94;
-    font-size: 15px;
-    margin-bottom: 12px;
-}
-
-.pagina-texto strong {
-    color: #e8e0d4;
-}
-
-.tabla-fuentes {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.tabla-fuentes th,
-.tabla-fuentes td {
-    border: 1px solid #3a302c;
-    padding: 13px 15px;
-    text-align: left;
-    vertical-align: top;
-    font-size: 14px;
-}
-
-.tabla-fuentes th {
-    background-color: #1a1817;
-    color: #d8b98c;
-    font-size: 11px;
-    font-weight: normal;
-    letter-spacing: 2px;
-}
-
-.tabla-fuentes td {
-    color: #a99e94;
-}
-
-.tabla-fuentes td:first-child {
-    color: #eee5da;
-}
-
-.tabla-fuentes .pendiente {
-    color: #756c64;
-    font-style: italic;
-}
-
-@media (max-width: 800px) {
-    .pagina-texto {
-        padding: 60px 25px 80px;
-    }
 
     .tabla-fuentes {
         display: block;
         overflow-x: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer nav {
+        justify-content: center;
     }
 }
