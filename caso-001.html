@@ -250,11 +250,52 @@
 
         <a href="fuentes.html">Fuentes</a>
 
-        <a href="https://wa.me/50962830199?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20Archivo%20404" target="_blank" rel="noopener">Stacy Lopez Blanco</a>
+        <button type="button" class="contacto-boton" id="abrir-contacto">Mi contacto</button>
       </nav>
 
       <p>© 2026 Archivo 404</p>
     </footer>
+    <div class="modal" id="modal-contacto" hidden>
+      <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button type="button" class="modal-cerrar" aria-label="Cerrar">&times;</button>
+
+        <p class="numero">ARCHIVO 404</p>
+
+        <h2 id="modal-titulo">MI CONTACTO</h2>
+
+        <p>
+          &#191;Tienes una pregunta sobre el archivo? Escr&#237;beme por WhatsApp.
+        </p>
+
+        <a class="boton" href="https://wa.me/50962830199?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20Archivo%20404" target="_blank" rel="noopener">ENVIAR MENSAJE</a>
+      </div>
+    </div>
+
+    <script>
+      const abrirContacto = document.getElementById('abrir-contacto');
+      const modalContacto = document.getElementById('modal-contacto');
+      const cerrarContacto = document.querySelector('.modal-cerrar');
+
+      abrirContacto.addEventListener('click', () => {
+        modalContacto.hidden = false;
+      });
+
+      cerrarContacto.addEventListener('click', () => {
+        modalContacto.hidden = true;
+      });
+
+      modalContacto.addEventListener('click', (event) => {
+        if (event.target === modalContacto) {
+          modalContacto.hidden = true;
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          modalContacto.hidden = true;
+        }
+      });
+    </script>
   </body>
 
 </html>

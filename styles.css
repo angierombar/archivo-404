@@ -590,6 +590,87 @@ footer a:focus {
 }
 
 /*=============================
+  |  |  |MODAL DE CONTACTO
+==============================*/
+.contacto-boton {
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-gold);
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+}
+
+.contacto-boton:hover,
+.contacto-boton:focus {
+    color: var(--color-accent);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(17, 16, 15, 0.85);
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-contenido {
+    position: relative;
+    width: min(420px, 100%);
+    padding: 2.5rem 2rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-muted);
+    border: 0;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-cerrar:hover,
+.modal-cerrar:focus {
+    color: var(--color-accent);
+}
+
+.modal-contenido .numero {
+    margin: 0 0 1rem;
+    color: var(--color-accent);
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.modal-contenido h2 {
+    margin: 0 0 1rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    color: var(--color-text-strong);
+}
+
+.modal-contenido p {
+    margin: 0 0 1rem;
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+/*=============================
   |  |  |DISEÑO RESPONSIVO
 ==============================*/
 @media (max-width: 800px) {
