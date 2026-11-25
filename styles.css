@@ -526,3 +526,96 @@ footer {
         height: 280px;
     }
 }
+
+
+/* ================================
+   SOBRE EL ARCHIVO / FUENTES
+================================ */
+
+.pagina-texto {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 30px 100px;
+}
+
+.pagina-texto > h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.05;
+    color: #eee5da;
+    margin: 15px 0 20px;
+}
+
+.pagina-texto > .descripcion {
+    margin-bottom: 55px;
+}
+
+.pagina-texto section {
+    margin-bottom: 50px;
+}
+
+.pagina-texto h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    color: #d8b98c;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #3a302c;
+}
+
+.pagina-texto p {
+    color: #a99e94;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.pagina-texto strong {
+    color: #e8e0d4;
+}
+
+.tabla-fuentes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-fuentes th,
+.tabla-fuentes td {
+    border: 1px solid #3a302c;
+    padding: 13px 15px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.tabla-fuentes th {
+    background-color: #1a1817;
+    color: #d8b98c;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.tabla-fuentes td {
+    color: #a99e94;
+}
+
+.tabla-fuentes td:first-child {
+    color: #eee5da;
+}
+
+.tabla-fuentes .pendiente {
+    color: #756c64;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    .pagina-texto {
+        padding: 60px 25px 80px;
+    }
+
+    .tabla-fuentes {
+        display: block;
+        overflow-x: auto;
+    }
+}
