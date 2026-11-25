@@ -414,49 +414,66 @@
 
         <a href="fuentes.html">Fuentes</a>
 
-        <button type="button" class="contacto-boton" id="abrir-contacto">Mi contacto</button>
       </nav>
 
       <p>© 2026 Archivo 404</p>
     </footer>
-    <div class="modal" id="modal-contacto" hidden>
-      <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-        <button type="button" class="modal-cerrar" aria-label="Cerrar">&times;</button>
+    <button type="button" class="chat-flotante" id="abrir-chat" aria-label="Abrir chat">&#128172;</button>
 
-        <p class="numero">ARCHIVO 404</p>
+    <div class="chat-caja" id="chat-caja" hidden>
+      <div class="chat-cabecera">
+        <p>ARCHIVO 404</p>
 
-        <h2 id="modal-titulo">MI CONTACTO</h2>
-
-        <p>
-          &#191;Tienes una pregunta sobre el archivo? Escr&#237;beme por WhatsApp.
-        </p>
-
-        <a class="boton" href="https://wa.me/50662830199?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20Archivo%20404" target="_blank" rel="noopener">ENVIAR MENSAJE</a>
+        <button type="button" class="chat-cerrar" aria-label="Cerrar chat">&times;</button>
       </div>
+
+      <div class="chat-mensajes">
+        <p class="chat-bienvenida">
+          &#161;Hola! Escribe tu mensaje y te responder&#233; por WhatsApp.
+        </p>
+      </div>
+
+      <form class="chat-formulario" id="chat-formulario">
+        <label for="chat-texto" class="solo-lectores">Escribe tu mensaje</label>
+
+        <input id="chat-texto" name="chat-texto" type="text" placeholder="Escribe tu mensaje..." required />
+
+        <button type="submit">Enviar</button>
+      </form>
     </div>
 
     <script>
-      const abrirContacto = document.getElementById('abrir-contacto');
-      const modalContacto = document.getElementById('modal-contacto');
-      const cerrarContacto = document.querySelector('.modal-cerrar');
+      const abrirChat = document.getElementById('abrir-chat');
+      const cajaChat = document.getElementById('chat-caja');
+      const cerrarChat = document.querySelector('.chat-cerrar');
+      const formularioChat = document.getElementById('chat-formulario');
+      const textoChat = document.getElementById('chat-texto');
 
-      abrirContacto.addEventListener('click', () => {
-        modalContacto.hidden = false;
+      abrirChat.addEventListener('click', () => {
+        cajaChat.hidden = false;
+        textoChat.focus();
       });
 
-      cerrarContacto.addEventListener('click', () => {
-        modalContacto.hidden = true;
+      cerrarChat.addEventListener('click', () => {
+        cajaChat.hidden = true;
       });
 
-      modalContacto.addEventListener('click', (event) => {
-        if (event.target === modalContacto) {
-          modalContacto.hidden = true;
+      formularioChat.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const mensaje = textoChat.value.trim();
+
+        if (mensaje) {
+          window.open(
+            'https://wa.me/50662830199?text=' + encodeURIComponent(mensaje),
+            '_blank',
+            'noopener'
+          );
         }
       });
 
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-          modalContacto.hidden = true;
+          cajaChat.hidden = true;
         }
       });
     </script>
