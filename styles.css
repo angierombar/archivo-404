@@ -241,6 +241,48 @@ main > section.hero > p.descripcion {
 }
 
 /*=============================
+  |  |  |CARRUSEL
+==============================*/
+.carrusel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carrusel-ventana {
+    flex: 1;
+    overflow: hidden;
+}
+
+.carrusel-pista {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carrusel-pista .tarjeta {
+    flex: 0 0 100%;
+}
+
+.carrusel-boton {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-surface);
+    color: var(--color-gold);
+    border: 1px solid var(--color-border);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.carrusel-boton:hover,
+.carrusel-boton:focus {
+    background-color: var(--color-accent-dark);
+    color: var(--color-text-strong);
+    border-color: var(--color-accent-dark);
+}
+
+/*=============================
   |  |  |SECCION SOBRE (INICIO)
 ==============================*/
 .sobre {

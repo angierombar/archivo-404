@@ -46,54 +46,62 @@
           <h2>CASOS DESTACADOS</h2>
         </div>
 
-        <div class="casos">
-          <article class="tarjeta">
-            <div class="imagen-caso">
-              <img src="image/jack.png" alt="Ilustración histórica de Jack the Ripper" />
+        <div class="carrusel">
+          <button type="button" class="carrusel-boton anterior" aria-label="Caso anterior">‹</button>
+
+          <div class="carrusel-ventana">
+            <div class="carrusel-pista" id="carrusel-pista">
+              <article class="tarjeta">
+                <div class="imagen-caso">
+                  <img src="image/jack.png" alt="Ilustración histórica de Jack the Ripper" />
+                </div>
+
+                <div class="contenido-tarjeta">
+                  <span>ARCHIVE #001</span>
+
+                  <h3>Jack the Ripper</h3>
+
+                  <p>Londres, Inglaterra · 1888</p>
+
+                  <a href="caso-001.html">Ver caso →</a>
+                </div>
+              </article>
+
+              <article class="tarjeta">
+                <div class="imagen-caso">
+                  <img src="image/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía" />
+                </div>
+
+                <div class="contenido-tarjeta">
+                  <span>ARCHIVE #002</span>
+
+                  <h3>Zodiac Killer</h3>
+
+                  <p>California, EE. UU. · 1968</p>
+
+                  <a href="caso-002.html">Ver caso →</a>
+                </div>
+              </article>
+
+              <article class="tarjeta">
+                <div class="imagen-caso">
+                  <img src="image/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia" />
+                </div>
+
+                <div class="contenido-tarjeta">
+                  <span>ARCHIVE #003</span>
+
+                  <h3>Black Dahlia</h3>
+
+                  <p>Los Ángeles, EE. UU. · 1947</p>
+
+                  <a href="caso-003.html">Ver caso →</a>
+                </div>
+              </article>
             </div>
+          </div>
 
-            <div class="contenido-tarjeta">
-              <span>ARCHIVE #001</span>
-
-              <h3>Jack the Ripper</h3>
-
-              <p>Londres, Inglaterra · 1888</p>
-
-              <a href="caso-001.html">Ver caso →</a>
-            </div>
-          </article>
-
-          <article class="tarjeta">
-            <div class="imagen-caso">
-              <img src="image/zodiac.png" alt="Retrato hablado del Zodiac Killer realizado por la policía" />
-            </div>
-
-            <div class="contenido-tarjeta">
-              <span>ARCHIVE #002</span>
-
-              <h3>Zodiac Killer</h3>
-
-              <p>California, EE. UU. · 1968</p>
-
-              <a href="caso-002.html">Ver caso →</a>
-            </div>
-          </article>
-
-          <article class="tarjeta">
-            <div class="imagen-caso">
-              <img src="image/elizabeth.png" alt="Fotografía de Elizabeth Short, conocida como Black Dahlia" />
-            </div>
-
-            <div class="contenido-tarjeta">
-              <span>ARCHIVE #003</span>
-
-              <h3>Black Dahlia</h3>
-
-              <p>Los Ángeles, EE. UU. · 1947</p>
-
-              <a href="caso-003.html">Ver caso →</a>
-            </div>
-          </article>
+          <button type="button" class="carrusel-boton siguiente" aria-label="Caso siguiente">›</button>
         </div>
       </section>
 
@@ -127,6 +135,28 @@
 
       <p>© 2026 Archivo 404</p>
     </footer>
+
+    <script>
+      const pista = document.getElementById('carrusel-pista');
+      const tarjetas = pista.querySelectorAll('.tarjeta');
+      const botonAnterior = document.querySelector('.carrusel-boton.anterior');
+      const botonSiguiente = document.querySelector('.carrusel-boton.siguiente');
+      let indice = 0;
+
+      function mostrarCaso() {
+        pista.style.transform = 'translateX(-' + (indice * 100) + '%)';
+      }
+
+      botonAnterior.addEventListener('click', () => {
+        indice = (indice - 1 + tarjetas.length) % tarjetas.length;
+        mostrarCaso();
+      });
+
+      botonSiguiente.addEventListener('click', () => {
+        indice = (indice + 1) % tarjetas.length;
+        mostrarCaso();
+      });
+    </script>
   </body>
 
 </html>
