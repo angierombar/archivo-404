@@ -565,6 +565,7 @@ main > section.hero > p.descripcion {
 ==============================*/
 footer {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
     padding: 2rem 5%;
@@ -576,6 +577,7 @@ footer {
 
 footer nav {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -595,11 +597,12 @@ footer a:focus {
 .contacto-boton {
     padding: 0;
     background-color: transparent;
-    color: var(--color-gold);
+    color: var(--color-muted-dark);
     border: 0;
     font-family: inherit;
     font-size: inherit;
     letter-spacing: inherit;
+    line-height: inherit;
     cursor: pointer;
 }
 
