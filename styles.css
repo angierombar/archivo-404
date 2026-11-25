@@ -246,11 +246,12 @@ main > section.hero > p.descripcion {
 .carrusel {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
 .carrusel-ventana {
-    flex: 1;
+    flex: 0 1 420px;
     overflow: hidden;
 }
 
@@ -261,6 +262,17 @@ main > section.hero > p.descripcion {
 
 .carrusel-pista .tarjeta {
     flex: 0 0 100%;
+}
+
+.carrusel-pista .imagen-caso {
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.carrusel-pista .imagen-caso img {
+    height: 100%;
+    padding: 1rem;
+    object-fit: contain;
 }
 
 .carrusel-boton {
